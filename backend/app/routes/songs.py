@@ -50,6 +50,50 @@ def search_songs(
         "songs": songs
     }
 
+@router.get("/filter")
+def filter_songs(
+    mood: str | None = None,
+    year: int | None = None,
+    lyricist: str | None = None,
+    composer: str | None = None,
+    singer: str | None = None,
+    theme: str | None = None,
+    db: Session = Depends(get_db)
+):
+    query = db.query(Song)
+
+    if mood:
+        query = query.filter(Song.mood.ilike(f"%{mood}%"))
+
+    if year:
+        query = query.filter(Song.year == year)
+
+    if lyricist:
+        query = query.filter(Song.lyricist.ilike(f"%{lyricist}%"))
+
+    if composer:
+        query = query.filter(Song.composer.ilike(f"%{composer}%"))
+
+    if singer:
+        query = query.filter(Song.singers.ilike(f"%{singer}%"))
+
+    if theme:
+        query = query.filter(Song.themes.ilike(f"%{theme}%"))
+
+    songs = query.all()
+
+    return {
+        "filters": {
+            "mood": mood,
+            "year": year,
+            "lyricist": lyricist,
+            "composer": composer,
+            "singer": singer,
+            "theme": theme
+        },
+        "count": len(songs),
+        "songs": songs
+    }
 
 @router.get("/{song_id}")
 def get_song(song_id: int, db: Session = Depends(get_db)):
