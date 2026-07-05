@@ -1,3 +1,4 @@
+from app.routes import qa
 from fastapi import FastAPI
 from app.database import Base, engine
 from app.models import Song
@@ -12,7 +13,7 @@ app = FastAPI(
 )
 
 app.include_router(songs.router)
-
+app.include_router(qa.router)
 
 @app.get("/")
 def root():
