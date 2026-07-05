@@ -1,3 +1,4 @@
+from app.routes import lyrics
 from app.routes import qa
 from fastapi import FastAPI
 from app.database import Base, engine
@@ -14,6 +15,7 @@ app = FastAPI(
 
 app.include_router(songs.router)
 app.include_router(qa.router)
+app.include_router(lyrics.router)
 
 @app.get("/")
 def root():

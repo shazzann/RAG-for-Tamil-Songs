@@ -1,4 +1,6 @@
-from sqlalchemy import Column, Integer, String, Text
+from sqlalchemy import Column, Integer, String, Text, ForeignKey
+from sqlalchemy.orm import relationship
+
 from app.database import Base
 
 
@@ -20,3 +22,25 @@ class Song(Base):
 
     lyrics = Column(Text, nullable=True)
     source_url = Column(Text, nullable=True)
+
+    chunks = relationship(
+        "LyricsChunk",
+        back_populates="song",
+        cascade="all, delete-orphan"
+    )
+
+
+class LyricsChunk(Base):
+    __tablename__ = "lyrics_chunks"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    song_id = Column(Integer, ForeignKey("songs.id"), nullable=False, index=True)
+
+    chunk_text = Column(Text, nullable=False)
+    chunk_index = Column(Integer, nullable=False)
+
+    start_line = Column(Integer, nullable=True)
+    end_line = Column(Integer, nullable=True)
+
+    song = relationship("Song", back_populates="chunks")
