@@ -1,0 +1,41 @@
+query_id,query,query_type,search_target,expected_song_titles,expected_keywords,expected_filters,language_style,difficulty,notes
+Q001,Who wrote Roja Kadale?,metadata_factual,song_metadata,Roja Kadale,Vairamuthu,title=Roja Kadale,english,easy,Tests lyricist lookup by exact title.
+Q002,Who composed Venmegam Pennaga?,metadata_factual,song_metadata,Venmegam Pennaga,Yuvan Shankar Raja,title=Venmegam Pennaga,english,easy,Tests composer lookup by exact title.
+Q003,Who sang Marana Mass?,metadata_factual,song_metadata,Marana Mass,S. P. Balasubrahmanyam|Anirudh Ravichander,title=Marana Mass,english,easy,Tests singer lookup for multiple singers.
+Q004,Which movie is Vennilave from?,metadata_factual,song_metadata,Vennilave,Thuppakki,title=Vennilave,english,easy,Tests movie lookup.
+Q005,What year did Vizhi Moodi Yosithal come out?,metadata_factual,song_metadata,Vizhi Moodi Yosithal,2009,title=Vizhi Moodi Yosithal,english,easy,Tests year lookup.
+Q006,Show me romantic songs,structured_filter,song_metadata,Roja Kadale|Venmegam Pennaga|Vennilave|Vizhi Moodi Yosithal,Romantic,mood=Romantic,english,easy,Tests mood filter.
+Q007,List energetic songs,structured_filter,song_metadata,Marana Mass,Energetic,mood=Energetic,english,easy,Tests mood filter for energetic songs.
+Q008,Songs composed by Harris Jayaraj,structured_filter,song_metadata,Roja Kadale|Vennilave|Vizhi Moodi Yosithal,Harris Jayaraj,composer=Harris Jayaraj,english,easy,Tests composer filter.
+Q009,Songs by Na Muthukumar,structured_filter,song_metadata,Venmegam Pennaga|Vennilave|Vizhi Moodi Yosithal,Na.Muthukumar|Na. Muthukumar,lyricist=Na.Muthukumar,english,medium,Tests name normalization because data has both Na.Muthukumar and Na. Muthukumar.
+Q010,Songs released in 2012,structured_filter,song_metadata,Vennilave,2012,year=2012,english,easy,Tests year filter.
+Q011,Romantic songs composed by Harris Jayaraj,structured_filter,song_metadata,Roja Kadale|Vennilave|Vizhi Moodi Yosithal,Romantic|Harris Jayaraj,mood=Romantic;composer=Harris Jayaraj,english,medium,Tests combined mood + composer filter.
+Q012,Romantic songs written by Vairamuthu,structured_filter,song_metadata,Roja Kadale,Romantic|Vairamuthu,mood=Romantic;lyricist=Vairamuthu,english,medium,Tests combined mood + lyricist filter.
+Q013,Mass songs by Anirudh,structured_filter,song_metadata,Marana Mass,Mass|Anirudh,theme=Mass;composer_or_singer=Anirudh,english,medium,Tests term that may appear as theme and person.
+Q014,Find songs about love,theme_search,song_metadata,Roja Kadale|Venmegam Pennaga|Vennilave,Love,theme=Love,english,easy,Tests theme filtering for love.
+Q015,Show songs about eyes,theme_search,song_metadata,Vizhi Moodi Yosithal,eyes|Vizhi,theme=eyes,english,easy,Tests eye concept using theme field.
+Q016,List songs about moonlight,theme_search,song_metadata,Vennilave,Moonlight|Vennilave,theme=Moonlight,english,easy,Tests moonlight theme.
+Q017,Find fantasy love songs,theme_search,song_metadata,Venmegam Pennaga,Fantasy|Love,theme=Fantasy;theme=Love,english,medium,Tests multiple themes.
+Q018,Find mass energetic songs,theme_search,song_metadata,Marana Mass,Mass|Energetic,theme=Mass;mood=Energetic,english,medium,Tests theme + mood combination.
+Q019,lines about a rose and a king's daughter,semantic_lyrics,lyrics_chunks,Roja Kadale,Roja Kadalae|rajaa magalae,none,english,medium,Should retrieve Roja Kadale lyric line.
+Q020,lines about white cloud becoming a woman,semantic_lyrics,lyrics_chunks,Venmegam Pennaga,Venmegam pennaga,none,english,medium,Tests semantic English query to Tanglish lyric.
+Q021,lines about yellow sunlight and lightning,semantic_lyrics,lyrics_chunks,Venmegam Pennaga,Manjal veyil|minnal oli,none,english,medium,Tests semantic retrieval over lyric phrase.
+Q022,lines about the moon coming down to earth,semantic_lyrics,lyrics_chunks,Vennilave,Vennilavae|tharayil uthithaai,none,english,medium,Tests semantic query for moon imagery.
+Q023,lines about closing eyes and thinking,semantic_lyrics,lyrics_chunks,Vizhi Moodi Yosithal,Vizhi moodi yosithaal,none,english,medium,Tests semantic retrieval for eyes/closing eyes.
+Q024,lines about rain bird,semantic_lyrics,lyrics_chunks,Vizhi Moodi Yosithal,Mazhai kiliyae,none,english,medium,Tests semantic retrieval of rain imagery.
+Q025,lines about who is above and who is below,semantic_lyrics,lyrics_chunks,Marana Mass,Evandaa mela|Evandaa keezha,none,english,medium,Tests semantic retrieval for mass lyric line.
+Q026,kan pathi song lines,tanglish_query,lyrics_chunks,Vizhi Moodi Yosithal,Vizhi|eyes,query_expansion=kan->eyes|vizhi|கண்,tanglish,medium,Tests Tanglish eye query; should improve after query expansion.
+Q027,mazhai irukkura lines,tanglish_query,lyrics_chunks,Vizhi Moodi Yosithal,Mazhai,query_expansion=mazhai->rain|மழை,tanglish,medium,Tests Tanglish rain query.
+Q028,kadhal songs sollu,tanglish_query,song_metadata,Roja Kadale|Venmegam Pennaga|Vennilave,Love,query_expansion=kadhal->love|காதல்,tanglish,medium,Tests Tanglish theme query.
+Q029,mass song ah kaatu,tanglish_query,song_metadata,Marana Mass,Mass|Energetic,query_expansion=mass->Mass,tanglish,easy,Tests Tanglish-style informal query.
+Q030,Anirudh oda songs,tanglish_query,song_metadata,Marana Mass,Anirudh Ravichander,person=Anirudh,tanglish,easy,Tests person matching in Tanglish sentence.
+Q031,காதல் பாடல்கள் காட்டு,tamil_query,song_metadata,Roja Kadale|Venmegam Pennaga|Vennilave,Love,query_expansion=காதல்->love,tamil,medium,Tests Tamil script query for love songs.
+Q032,கண் பற்றி வரும் வரிகள்,tamil_query,lyrics_chunks,Vizhi Moodi Yosithal,Vizhi|eyes,query_expansion=கண்->eyes|vizhi|kan,tamil,hard,"Dataset has Tanglish lyrics, so this needs query expansion/semantic retrieval."
+Q033,மழை பற்றி வரிகள்,tamil_query,lyrics_chunks,Vizhi Moodi Yosithal,Mazhai,query_expansion=மழை->mazhai|rain,tamil,hard,Tests Tamil-to-Tanglish expansion.
+Q034,சோகமான பாடல்கள்,tamil_query,song_metadata,,,mood=sad,tamil,hard,Negative/empty-result test: current sample has no sad mood songs.
+Q035,Show sad songs by Vairamuthu in 2025,negative_filter,song_metadata,,,mood=sad;lyricist=Vairamuthu;year=2025,english,medium,Expected no result with current sample data.
+Q036,Who wrote a song that is not in the database?,negative_factual,song_metadata,,,none,english,easy,Expected no matched song.
+Q037,Find devotional songs,negative_filter,song_metadata,,Devotion,theme=Devotion,english,medium,Current data has Devotion theme but not devotional mood; useful for testing theme vs mood distinction.
+Q038,romantic song from 2015 by Harris Jayaraj,structured_filter,song_metadata,Roja Kadale,Romantic|2015|Harris Jayaraj,mood=Romantic;year=2015;composer=Harris Jayaraj,english,medium,Tests multiple filters.
+Q039,song from Petta with mass theme,structured_filter,song_metadata,Marana Mass,Petta|Mass,movie=Petta;theme=Mass,english,medium,Tests movie + theme.
+Q040,song with moon theme from Thuppakki,structured_filter,song_metadata,Vennilave,Moonlight|Thuppakki,movie=Thuppakki;theme=Moonlight,english,medium,Tests movie + theme lookup.

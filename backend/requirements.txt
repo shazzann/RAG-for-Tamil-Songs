@@ -1,4 +1,7 @@
 aiofiles==25.1.0
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.1
+aiosignal==1.4.0
 alembic==1.18.5
 altair==6.0.0
 annotated-doc==0.0.4
@@ -25,19 +28,23 @@ chardet==7.1.0
 charset-normalizer==3.4.3
 click==8.3.1
 click-default-group==1.2.4
+cloudpickle==3.1.2
 cmdstanpy==1.3.0
 colorama==0.4.6
 comm==0.2.3
 contourpy==1.3.3
 cookiecutter==2.7.1
 coverage==7.13.5
+cryptography==48.0.1
 cycler==0.12.1
+databricks-sdk==0.120.0
 debugpy==1.8.20
 decorator==5.2.1
 defusedxml==0.7.1
 # Editable install with no version control (digitaltwinml==0.1)
 -e c:\users\asus\desktop\digital twin\digitaltwinml
 distro==1.9.0
+docker==7.2.0
 duckdb==1.5.1
 dynaconf==3.2.13
 environs==15.0.0
@@ -48,11 +55,19 @@ fastapi==0.127.0
 fastjsonschema==2.21.2
 feedparser==6.0.12
 filelock==3.20.1
+Flask==3.1.3
+flask-cors==6.0.5
 fonttools==4.62.1
 fqdn==1.5.1
+frozenlist==1.8.0
 fsspec==2025.12.0
 gitdb==4.0.12
 GitPython==3.1.46
+google-auth==2.55.2
+google-genai==2.11.0
+graphene==3.4.3
+graphql-core==3.2.11
+graphql-relay==3.2.0
 graphviz==0.21
 greenlet==3.3.2
 gunicorn==25.3.0
@@ -61,8 +76,10 @@ holidays==0.93
 httpcore==1.0.9
 httptools==0.7.1
 httpx==0.28.1
+huey==3.2.1
 huggingface-hub==0.36.0
 idna==3.10
+importlib_metadata==9.0.0
 importlib_resources==6.5.2
 iniconfig==2.3.0
 instaloader==4.15
@@ -72,6 +89,7 @@ ipython==8.39.0
 ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.8
 isoduration==20.11.0
+itsdangerous==2.2.0
 jedi==0.19.2
 Jinja2==3.1.6
 jiter==0.16.0
@@ -107,9 +125,13 @@ matplotlib==3.10.8
 matplotlib-inline==0.2.1
 mdurl==0.1.2
 mistune==3.2.1
+mlflow==3.14.0
+mlflow-skinny==3.14.0
+mlflow-tracing==3.14.0
 more-itertools==10.8.0
 mostlyai==5.10.1
 mpmath==1.3.0
+multidict==6.7.1
 narwhals==2.18.1
 nbclient==0.10.4
 nbconvert==7.17.1
@@ -124,6 +146,10 @@ omegaconf==2.3.0
 openai==2.45.0
 openai-whisper==20250625
 openpyxl==3.1.5
+opentelemetry-api==1.43.0
+opentelemetry-proto==1.43.0
+opentelemetry-sdk==1.43.0
+opentelemetry-semantic-conventions==0.64b0
 orjson==3.11.8
 outcome==1.3.0.post0
 packaging==25.0
@@ -138,14 +164,18 @@ pillow==12.1.1
 platformdirs==4.9.4
 plotly==5.24.1
 pluggy==1.6.0
+prettytable==3.18.0
 prometheus_client==0.25.0
 prompt_toolkit==3.0.52
+propcache==0.5.2
 prophet==1.3.0
-protobuf==7.34.1
+protobuf==6.33.6
 psutil==7.2.2
 psycopg2-binary==2.9.12
 pure_eval==0.2.3
 pyarrow==23.0.1
+pyasn1==0.6.4
+pyasn1_modules==0.4.2
 pycparser==3.0
 pycryptodomex==3.23.0
 pydantic==2.12.5
@@ -168,6 +198,7 @@ python-json-logger==4.1.0
 python-multipart==0.0.21
 python-slugify==8.0.4
 pytz==2025.2
+pywin32==312
 pywinpty==3.0.3
 PyYAML==6.0.3
 pyzmq==27.1.0
@@ -194,6 +225,7 @@ setuptools==80.9.0
 sgmllib3k==1.0.0
 shellingham==1.5.4
 six==1.17.0
+skops==0.14.0
 smart_open==7.5.1
 smmap==5.0.3
 sniffio==1.3.1
@@ -229,6 +261,7 @@ tzdata==2025.2
 uri-template==1.3.0
 urllib3==2.6.3
 uvicorn==0.40.0
+waitress==3.0.2
 watchdog==6.0.0
 watchfiles==1.1.1
 wcwidth==0.6.0
@@ -244,5 +277,6 @@ wrapt==2.1.2
 wsproto==1.3.2
 xgboost==3.2.0
 xxhash==3.6.0
+yarl==1.24.2
 yt-dlp==2025.12.8
-google-genai==2.11.0
+zipp==4.1.0
