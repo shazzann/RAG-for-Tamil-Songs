@@ -1,0 +1,37 @@
+﻿query_id,query,query_type,expected_titles,retrieved_titles,hit@5,precision@5,mrr
+Q001,Who wrote Roja Kadale?,metadata_factual,roja kadale,roja kadale | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | vennilave,1,0.2,1.0
+Q002,Who composed Venmegam Pennaga?,metadata_factual,venmegam pennaga,venmegam pennaga | vennilave | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal,1,0.2,1.0
+Q003,Who sang Marana Mass?,metadata_factual,marana mass,marana mass | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | vennilave,1,0.2,1.0
+Q004,Which movie is Vennilave from?,metadata_factual,vennilave,vennilave | venmegam pennaga | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal,1,0.2,1.0
+Q005,What year did Vizhi Moodi Yosithal come out?,metadata_factual,vizhi moodi yosithal,vizhi moodi yosithal | vennilave | vizhi moodi yosithal | venmegam pennaga | vizhi moodi yosithal,1,0.6,1.0
+Q006,Show me romantic songs,structured_filter,roja kadale | venmegam pennaga | vennilave | vizhi moodi yosithal,vennilave | vizhi moodi yosithal | vizhi moodi yosithal | roja kadale | venmegam pennaga,1,1.0,1.0
+Q007,List energetic songs,structured_filter,marana mass,marana mass | vizhi moodi yosithal | vizhi moodi yosithal | vennilave | vizhi moodi yosithal,1,0.2,1.0
+Q008,Songs composed by Harris Jayaraj,structured_filter,roja kadale | vennilave | vizhi moodi yosithal,vizhi moodi yosithal | vizhi moodi yosithal | vennilave | vizhi moodi yosithal | venmegam pennaga,1,0.8,1.0
+Q009,Songs by Na Muthukumar,structured_filter,venmegam pennaga | vennilave | vizhi moodi yosithal,vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | roja kadale | vennilave,1,0.8,1.0
+Q010,Songs released in 2012,structured_filter,vennilave,vizhi moodi yosithal | vennilave | marana mass | vizhi moodi yosithal | vizhi moodi yosithal,1,0.2,0.5
+Q011,Romantic songs composed by Harris Jayaraj,structured_filter,roja kadale | vennilave | vizhi moodi yosithal,vizhi moodi yosithal | vennilave | vizhi moodi yosithal | venmegam pennaga | vizhi moodi yosithal,1,0.8,1.0
+Q012,Romantic songs written by Vairamuthu,structured_filter,roja kadale,vizhi moodi yosithal | vennilave | vizhi moodi yosithal | roja kadale | venmegam pennaga,1,0.2,0.25
+Q013,Mass songs by Anirudh,structured_filter,marana mass,marana mass | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | vennilave,1,0.2,1.0
+Q014,Find songs about love,theme_search,roja kadale | venmegam pennaga | vennilave,vennilave | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | roja kadale,1,0.4,1.0
+Q015,Show songs about eyes,theme_search,vizhi moodi yosithal,vizhi moodi yosithal | vizhi moodi yosithal | vennilave | vizhi moodi yosithal | vizhi moodi yosithal,1,0.8,1.0
+Q016,List songs about moonlight,theme_search,vennilave,vennilave | vizhi moodi yosithal | venmegam pennaga | vizhi moodi yosithal | vizhi moodi yosithal,1,0.2,1.0
+Q017,Find fantasy love songs,theme_search,venmegam pennaga,vennilave | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | venmegam pennaga,1,0.2,0.2
+Q018,Find mass energetic songs,theme_search,marana mass,marana mass | vizhi moodi yosithal | vizhi moodi yosithal | vennilave | vizhi moodi yosithal,1,0.2,1.0
+Q019,lines about a rose and a king's daughter,semantic_lyrics,roja kadale,roja kadale | vennilave | vizhi moodi yosithal | vizhi moodi yosithal | venmegam pennaga,1,0.2,1.0
+Q020,lines about white cloud becoming a woman,semantic_lyrics,venmegam pennaga,venmegam pennaga | vennilave | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal,1,0.2,1.0
+Q021,lines about yellow sunlight and lightning,semantic_lyrics,venmegam pennaga,venmegam pennaga | vizhi moodi yosithal | vizhi moodi yosithal | vennilave | vizhi moodi yosithal,1,0.2,1.0
+Q022,lines about the moon coming down to earth,semantic_lyrics,vennilave,vennilave | venmegam pennaga | vizhi moodi yosithal | vizhi moodi yosithal | marana mass,1,0.2,1.0
+Q023,lines about closing eyes and thinking,semantic_lyrics,vizhi moodi yosithal,vizhi moodi yosithal | vennilave | vizhi moodi yosithal | marana mass | vizhi moodi yosithal,1,0.6,1.0
+Q024,lines about rain bird,semantic_lyrics,vizhi moodi yosithal,vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | venmegam pennaga | vizhi moodi yosithal,1,0.8,1.0
+Q025,lines about who is above and who is below,semantic_lyrics,marana mass,marana mass | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | vennilave,1,0.2,1.0
+Q026,kan pathi song lines,tanglish_query,vizhi moodi yosithal,vizhi moodi yosithal | vennilave | vizhi moodi yosithal | venmegam pennaga | vizhi moodi yosithal,1,0.6,1.0
+Q027,mazhai irukkura lines,tanglish_query,vizhi moodi yosithal,vizhi moodi yosithal | venmegam pennaga | marana mass | vizhi moodi yosithal | vizhi moodi yosithal,1,0.6,1.0
+Q028,kadhal songs sollu,tanglish_query,roja kadale | venmegam pennaga | vennilave,vennilave | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | venmegam pennaga,1,0.4,1.0
+Q029,mass song ah kaatu,tanglish_query,marana mass,marana mass | vizhi moodi yosithal | vennilave | vizhi moodi yosithal | venmegam pennaga,1,0.2,1.0
+Q030,Anirudh oda songs,tanglish_query,marana mass,vennilave | vizhi moodi yosithal | vizhi moodi yosithal | vizhi moodi yosithal | marana mass,1,0.2,0.2
+Q031,காதல் பாடல்கள் காட்டு,tamil_query,roja kadale | venmegam pennaga | vennilave,vennilave | vizhi moodi yosithal | roja kadale | vizhi moodi yosithal | vizhi moodi yosithal,1,0.4,1.0
+Q032,கண் பற்றி வரும் வரிகள்,tamil_query,vizhi moodi yosithal,vizhi moodi yosithal | vizhi moodi yosithal | vennilave | vizhi moodi yosithal | vizhi moodi yosithal,1,0.8,1.0
+Q033,மழை பற்றி வரிகள்,tamil_query,vizhi moodi yosithal,vizhi moodi yosithal | vizhi moodi yosithal | venmegam pennaga | vennilave | vizhi moodi yosithal,1,0.6,1.0
+Q038,romantic song from 2015 by Harris Jayaraj,structured_filter,roja kadale,vizhi moodi yosithal | vennilave | vizhi moodi yosithal | venmegam pennaga | vizhi moodi yosithal,0,0.0,0.0
+Q039,song from Petta with mass theme,structured_filter,marana mass,marana mass | vizhi moodi yosithal | vennilave | venmegam pennaga | vizhi moodi yosithal,1,0.2,1.0
+Q040,song with moon theme from Thuppakki,structured_filter,vennilave,vennilave | vizhi moodi yosithal | venmegam pennaga | vizhi moodi yosithal | vizhi moodi yosithal,1,0.2,1.0
