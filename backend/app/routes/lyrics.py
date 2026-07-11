@@ -5,6 +5,8 @@ from sqlalchemy import or_
 from app.database import get_db
 from app.models import LyricsChunk, Song
 
+from app.services.embedding_service import generate_embedding
+
 
 router = APIRouter(
     prefix="/lyrics",
@@ -118,6 +120,46 @@ def search_lyrics_by_theme(
                 "movie": chunk.song.movie,
                 "year": chunk.song.year,
                 "lyricist": chunk.song.lyricist,
+                "line": chunk.chunk_text,
+                "line_number": chunk.start_line,
+                "source_url": chunk.song.source_url
+            }
+            for chunk in chunks
+        ]
+    }
+@router.get("/semantic-search")
+def semantic_search_lyrics(
+    q: str = Query(..., description="Semantic search query"),
+    limit: int = Query(10, ge=1, le=50),
+    db: Session = Depends(get_db)
+):
+    query_embedding = generate_embedding(q)
+
+    if not query_embedding:
+        return {
+            "query": q,
+            "error": "Could not generate embedding for query."
+        }
+
+    chunks = (
+        db.query(LyricsChunk)
+        .join(Song)
+        .filter(LyricsChunk.embedding != None)
+        .order_by(LyricsChunk.embedding.cosine_distance(query_embedding))
+        .limit(limit)
+        .all()
+    )
+
+    return {
+        "query": q,
+        "count": len(chunks),
+        "results": [
+            {
+                "song_title": chunk.song.title,
+                "movie": chunk.song.movie,
+                "year": chunk.song.year,
+                "lyricist": chunk.song.lyricist,
+                "composer": chunk.song.composer,
                 "line": chunk.chunk_text,
                 "line_number": chunk.start_line,
                 "source_url": chunk.song.source_url
