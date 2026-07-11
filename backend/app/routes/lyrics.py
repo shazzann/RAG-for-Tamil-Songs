@@ -77,6 +77,7 @@ THEME_KEYWORDS = {
     "love": ["love", "kadhal", "காதல்"],
     "separation": ["separation", "pirivu", "பிரிவு", "missing", "longing"],
     "mother": ["mother", "amma", "அம்மா"],
+    "heart": ["heart", "idhayam", "இதயம்"]
 }
 
 

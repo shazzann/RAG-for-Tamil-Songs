@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey
 from sqlalchemy.orm import relationship
+from pgvector.sqlalchemy import Vector
 
 from app.database import Base
 
@@ -42,5 +43,7 @@ class LyricsChunk(Base):
 
     start_line = Column(Integer, nullable=True)
     end_line = Column(Integer, nullable=True)
+
+    embedding = Column(Vector(3072), nullable=True)
 
     song = relationship("Song", back_populates="chunks")

@@ -1,16 +1,22 @@
-"""
-Embedding service — generates vector embeddings for song lyrics.
-
-Supports OpenAI, Gemini, or a multilingual sentence-transformer model.
-"""
-
 import os
-from typing import List
+from dotenv import load_dotenv
+from google import genai
+
+load_dotenv()
+
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 
-async def get_embedding(text: str) -> List[float]:
-    """Generate an embedding vector for the given text.
-
-    TODO: plug in the chosen embedding provider (OpenAI / Gemini / HuggingFace).
+def generate_embedding(text: str):
     """
-    raise NotImplementedError("Embedding provider not configured yet.")
+    Generate embedding for a text chunk using Gemini.
+    """
+    if not text or not text.strip():
+        return None
+
+    response = client.models.embed_content(
+        model="gemini-embedding-2",
+        contents=text
+    )
+
+    return response.embeddings[0].values
