@@ -15,7 +15,7 @@ export interface ChatResponse {
 }
 
 export interface ChatRequest {
-  message: string;
+  question: string;
   top_k?: number;
 }
 
@@ -25,7 +25,7 @@ export const fetchChatResponse = async (query: string): Promise<ChatResponse> =>
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ message: query, top_k: 5 }),
+    body: JSON.stringify({ question: query, top_k: 5 }),
   });
 
   if (!response.ok) {

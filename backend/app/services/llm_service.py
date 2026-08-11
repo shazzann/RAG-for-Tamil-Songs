@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 _api_key = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=_api_key) if _api_key else None
 
-DEFAULT_MODEL = os.getenv("GEMINI_CHAT_MODEL", "gemini-2.5-flash")
+DEFAULT_MODEL = os.getenv("GEMINI_CHAT_MODEL", "gemini-3.5-flash")
 
 SYSTEM_PROMPT = """You are a specialized Tamil Song RAG (Retrieval-Augmented Generation) assistant.
 Your instructions:

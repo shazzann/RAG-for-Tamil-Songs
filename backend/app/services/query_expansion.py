@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 _api_key = os.getenv("GEMINI_API_KEY")
 client = genai.Client(api_key=_api_key) if _api_key else None
 
-DEFAULT_MODEL = os.getenv("GEMINI_CHAT_MODEL", "gemini-2.5-flash")
+DEFAULT_MODEL = os.getenv("GEMINI_CHAT_MODEL", "gemini-3.5-flash")
 
 EXPANSION_PROMPT = """You are a Tamil language expert and query expansion assistant for a Tamil song search engine.
 Your task is to take a user's search query (which could be in English, Tanglish, or Tamil script) and rewrite it into a comma-separated list of 3-5 optimized Tanglish (Tamil in English script) keywords for vector similarity search against a database of Tanglish song lyrics.
