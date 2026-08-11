@@ -1,11 +1,18 @@
-from app.routes import lyrics
-from app.routes import qa
-from fastapi import FastAPI
-from app.database import Base, engine
-from app.models import Song
-from app.routes import songs
+import logging
+from fastapi import FastAPI, Depends
+from sqlalchemy import text
+from sqlalchemy.orm import Session
 
-Base.metadata.create_all(bind=engine)
+from app.database import Base, engine, get_db
+from app.routes import songs, qa, lyrics, chat
+
+logger = logging.getLogger(__name__)
+
+# Attempt to create tables, but do not crash the application if Supabase is temporarily unreachable
+try:
+    Base.metadata.create_all(bind=engine)
+except Exception as e:
+    logger.warning(f"Could not connect to database on startup (Supabase may be offline/unreachable): {e}")
 
 app = FastAPI(
     title="Tamil Song RAG Agent",
@@ -16,9 +23,19 @@ app = FastAPI(
 app.include_router(songs.router)
 app.include_router(qa.router)
 app.include_router(lyrics.router)
+app.include_router(chat.router)
+
 
 @app.get("/")
-def root():
+def root(db: Session = Depends(get_db)):
+    """Health check endpoint reporting API and database status."""
+    db_status = "available"
+    try:
+        db.execute(text("SELECT 1"))
+    except Exception:
+        db_status = "unavailable"
+
     return {
-        "message": "Tamil Song RAG Agent API is running"
+        "api": "healthy",
+        "database": db_status
     }
