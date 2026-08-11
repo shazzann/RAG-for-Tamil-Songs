@@ -1,0 +1,93 @@
+.source-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.source-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.source-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.source-badge {
+  background: var(--primary-glow);
+  color: #D8B4FE;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.source-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.source-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.source-lyric {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.lyric-icon {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.lyric-text {
+  font-size: 0.85rem;
+  color: #E2E8F0;
+  font-style: italic;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.source-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.score-bar-container {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8B5CF6, #3B82F6);
+  border-radius: 2px;
+}
+
+.score-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
