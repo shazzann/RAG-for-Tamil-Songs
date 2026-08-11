@@ -24,7 +24,8 @@ def generate_missing_embeddings():
         updated = 0
 
         for chunk in chunks:
-            print(f"Embedding chunk {chunk.id}: {chunk.chunk_text[:50]}")
+            safe_text = chunk.chunk_text[:50].encode("ascii", "replace").decode("ascii")
+            print(f"Embedding chunk {chunk.id}: {safe_text}")
 
             embedding = generate_embedding(chunk.chunk_text)
 

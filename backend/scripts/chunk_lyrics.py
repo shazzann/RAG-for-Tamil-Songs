@@ -8,32 +8,59 @@ from app.database import SessionLocal, Base, engine
 from app.models import Song, LyricsChunk
 
 
-def split_lyrics_into_chunks(lyrics: str):
+def split_lyrics_into_chunks(lyrics: str, max_lines_per_chunk: int = 4):
     """
-    Simple version:
-    - Split lyrics by line
-    - Remove empty lines
-    - Each line becomes one chunk
-
-    Later we can improve this to group 2-4 lines together.
+    Groups lyrics into stanzas of up to `max_lines_per_chunk` lines.
+    Respects empty lines as natural stanza breaks.
     """
     if not lyrics:
         return []
 
-    lines = [
-        line.strip()
-        for line in lyrics.splitlines()
-        if line.strip()
-    ]
-
     chunks = []
-
-    for index, line in enumerate(lines):
+    current_chunk_lines = []
+    chunk_index = 0
+    start_line_num = 1
+    
+    original_lines = lyrics.splitlines()
+    
+    for i, line in enumerate(original_lines):
+        line_num = i + 1
+        stripped_line = line.strip()
+        
+        if stripped_line:
+            if not current_chunk_lines:
+                start_line_num = line_num
+            current_chunk_lines.append(stripped_line)
+            
+            # If we hit max lines, emit the chunk
+            if len(current_chunk_lines) == max_lines_per_chunk:
+                chunks.append({
+                    "chunk_text": "\n".join(current_chunk_lines),
+                    "chunk_index": chunk_index,
+                    "start_line": start_line_num,
+                    "end_line": line_num
+                })
+                chunk_index += 1
+                current_chunk_lines = []
+        else:
+            # Empty line -> natural stanza break
+            if current_chunk_lines:
+                chunks.append({
+                    "chunk_text": "\n".join(current_chunk_lines),
+                    "chunk_index": chunk_index,
+                    "start_line": start_line_num,
+                    "end_line": line_num - 1
+                })
+                chunk_index += 1
+                current_chunk_lines = []
+                
+    # Flush remaining lines
+    if current_chunk_lines:
         chunks.append({
-            "chunk_text": line,
-            "chunk_index": index,
-            "start_line": index + 1,
-            "end_line": index + 1
+            "chunk_text": "\n".join(current_chunk_lines),
+            "chunk_index": chunk_index,
+            "start_line": start_line_num,
+            "end_line": len(original_lines)
         })
 
     return chunks
