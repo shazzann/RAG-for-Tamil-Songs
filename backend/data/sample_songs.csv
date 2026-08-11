@@ -1,5 +1,65 @@
-title,movie,year,singers,lyricist,composer,mood,themes,lyrics,source_url
-Roja Kadale,Anegan,2015,Sunidhi Chauhan and Chinmayi,Vairamuthu,Harris Jayaraj,Romantic,"Love;Devotion","Roja Kadalae En rajaa magalae","https://www.tamil2lyrics.com/lyrics/roja-kadalae-song-lyrics/"
-Venmegam Pennaga,Yaaradi Nee Mohini,2008,Hariharan,Na.Muthukumar,Yuvan Shankar Raja,Romantic,"Love;Fantasy","Venmegam pennaga uruvaanatho...Manjal veyil nee minnal oli nee","https://www.tamil2lyrics.com/lyrics/venmegam-pennaga-song-lyrics/"
-Marana Mass,Petta,2018,S. P. Balasubrahmanyam and Anirudh Ravichander,Vivek,Anirudh Ravichander,Energetic,"Mass","Thatlaatam dhaanga Tharlaanga song ah... Evandaa mela Evandaa keezha","https://www.tamil2lyrics.com/lyrics/marana-mass-song-lyrics/"
-Vennilave,Thuppakki,2012,Bombay Jayashree and Hariharan,Na. Muthukumar,Harris Jayaraj,Romantic,"Love;Moonlight","Vennilavae tharayil uthithaai Oru siripil ithayam parithaai",""
+﻿id,title,movie,year,singers,lyricist,composer,mood,themes,lyrics,source_url
+1,Roja Kadale,Anegan,2015,Sunidhi Chauhan and Chinmayi,Vairamuthu,Harris Jayaraj,Romantic,Love;Devotion,Roja Kadalae En rajaa magalae,https://www.tamil2lyrics.com/lyrics/roja-kadalae-song-lyrics/
+2,Venmegam Pennaga,Yaaradi Nee Mohini,2008,Hariharan,Na.Muthukumar,Yuvan Shankar Raja,Romantic,Love;Fantasy,Venmegam pennaga uruvaanatho...Manjal veyil nee minnal oli nee,https://www.tamil2lyrics.com/lyrics/venmegam-pennaga-song-lyrics/
+3,Marana Mass,Petta,2018,S. P. Balasubrahmanyam and Anirudh Ravichander,Vivek,Anirudh Ravichander,Energetic,Mass,Thatlaatam dhaanga Tharlaanga song ah... Evandaa mela Evandaa keezha,https://www.tamil2lyrics.com/lyrics/marana-mass-song-lyrics/
+4,Vennilave,Thuppakki,2012,Bombay Jayashree and Hariharan,Na. Muthukumar,Harris Jayaraj,Romantic,Love;Moonlight,Vennilavae tharayil uthithaai Oru siripil idhayam parithaai,
+5,Vizhi Moodi Yosithal,Ayan,2009,Karthik,Na.Muthukumar,Harris Jayaraj,Romantic,eyes,"Vizhi moodi yosithaal
+Angeyum vanthaai...
+Aasai ennum
+Thoondil mul thaan
+Mazhai kiliyae",https://www.tamil2lyrics.com/lyrics/vizhi-moodi-yosithal-song-lyrics/
+6,Munbe Vaa,Sillunu Oru Kaadhal,2006,Naresh Iyer; Shreya Ghoshal,Vaali,A. R. Rahman,Romantic,Love;Longing;Breeze, காதல் longing breeze eyes heart memory,
+7,New York Nagaram,Sillunu Oru Kaadhal,2006,A. R. Rahman,Vaali,A. R. Rahman,Sad,Separation;Loneliness;City, loneliness separation city night missing someone தனிமை பிரிவு,
+8,Enna Solla Pogirai,Kandukondain Kandukondain,2000,Shankar Mahadevan,Vairamuthu,A. R. Rahman,Romantic,Love;Proposal;Confession, love confession heart question காதல் சொல்லுதல்,
+9,Snehithane,Alaipayuthey,2000,Sadhana Sargam; Srinivas,Vairamuthu,A. R. Rahman,Romantic,Love;Marriage;Intimacy, romantic affection togetherness காதல் அன்பு,
+10,Pachai Nirame,Alaipayuthey,2000,Hariharan; Clinton Cerejo,Vairamuthu,A. R. Rahman,Romantic,Love;Colors;Nature, colors nature love green rain sky காதல் இயற்கை,
+11,Vaseegara,Minnale,2001,Bombay Jayashri,Thamarai,Harris Jayaraj,Romantic,Love;Desire;Dream, romantic dream desire heart காதல் கனவு,
+12,Ondra Renda,Kaakha Kaakha,2003,Bombay Jayashri,Thamarai,Harris Jayaraj,Romantic,Love;Praise;Beauty, beauty love admiration eyes பார்வை காதல்,
+13,Anbil Avan,Vinnaithaandi Varuvaayaa,2010,Devan Ekambaram; Chinmayi,Thamarai,A. R. Rahman,Romantic,Love;Wedding;Devotion, love devotion marriage together காதல் உறவு,
+14,Hosanna,Vinnaithaandi Varuvaayaa,2010,Vijay Prakash; Suzanne D'Mello; Blaaze,Thamarai,A. R. Rahman,Romantic,Love;First Love;Longing, first love longing prayer காதல் ஏக்கம்,
+15,Mannipaaya,Vinnaithaandi Varuvaayaa,2010,A. R. Rahman; Shreya Ghoshal,Thamarai,A. R. Rahman,Sad,Love;Regret;Forgiveness, regret forgiveness love pain மன்னிப்பு வலி,
+16,Nenjukkul Peidhidum,Vaaranam Aayiram,2008,Hariharan; Devan Ekambaram; V. V. Prassanna,Thamarai,Harris Jayaraj,Romantic,Love;Rain;Heart, rain heart love mazhai காதல் மழை,
+17,Ava Enna,Vaaranam Aayiram,2008,Karthik; V. V. Prassanna,Thamarai,Harris Jayaraj,Sad,Breakup;Longing;Memory, breakup memory missing love pirivu பிரிவு,
+18,Annul Maelae,Vaaranam Aayiram,2008,Sudha Raghunathan,Thamarai,Harris Jayaraj,Melancholy,Love;Yearning;Classical, yearning love classical longing ஏக்கம் காதல்,
+19,Anbe Anbe,Jeans,1998,Hariharan; Anuradha Sriram,Vairamuthu,A. R. Rahman,Romantic,Love;Beauty;Admiration, love beauty admiration heart காதல் அழகு,
+20,Poovukkul,Jeans,1998,Unnikrishnan; Sujatha Mohan,Vairamuthu,A. R. Rahman,Romantic,Love;Wonder;World, wonder world love flower பூ காதல்,
+21,Kadhal Rojave,Roja,1992,S. P. Balasubrahmanyam; Sujatha Mohan,Vairamuthu,A. R. Rahman,Sad,Love;Separation;Longing, separation longing rose love பிரிவு ரோஜா,
+22,Chinna Chinna Aasai,Roja,1992,Minmini,Vairamuthu,A. R. Rahman,Happy,Dreams;Hope;Nature, dreams hope nature happiness ஆசை கனவு,
+23,Uyire Uyire,Bombay,1995,Hariharan; K. S. Chithra,Vairamuthu,A. R. Rahman,Romantic,Love;Pain;Soul, soul love pain longing உயிர் காதல்,
+24,Kannalane,Bombay,1995,K. S. Chithra,Vairamuthu,A. R. Rahman,Romantic,Eyes;Love;Longing, eyes love gaze kan vizhi கண் விழி,
+25,Ennavale Adi Ennavale,Kadhalan,1994,Unnikrishnan,Vairamuthu,A. R. Rahman,Romantic,Love;Devotion;Beauty, devotion love beauty காதல் பக்தி,
+26,Mukkala Mukkabala,Kadhalan,1994,Mano; Swarnalatha,Vaali,A. R. Rahman,Energetic,Dance;Fun;Youth, dance energy fun youth கொண்டாட்டம்,
+27,Why This Kolaveri Di,3,2011,Dhanush,Dhanush,Anirudh Ravichander,Sad,Breakup;Humor;Tanglish, soup song breakup humor tanglish love failure,
+28,Kanave Kanave,David,2013,Anirudh Ravichander,Mohan Rajan,Anirudh Ravichander,Sad,Dream;Loss;Pain, dream loss pain sad kanavu கனவு வலி,
+29,Po Nee Po,3,2011,Mohit Chauhan; Anirudh Ravichander,Dhanush,Anirudh Ravichander,Sad,Breakup;Separation;Pain, go away separation pain love failure பிரிவு,
+30,Idhazhin Oram,3,2011,Ajesh Ashok; Anirudh Ravichander,Dhanush,Anirudh Ravichander,Romantic,Love;Smile;Youth, smile love youth romance காதல் சிரிப்பு,
+31,Rowdy Baby,Maari 2,2018,Dhanush; Dhee,Poetu Dhanush,Yuvan Shankar Raja,Energetic,Dance;Fun;Mass, dance fun energy playful kuthu,
+32,Aaluma Doluma,Vedalam,2015,Anirudh Ravichander; Badshah,Rokesh,Anirudh Ravichander,Energetic,Mass;Dance;Celebration, mass dance celebration energy kuthu,
+33,Vaathi Coming,Master,2021,Anirudh Ravichander; Gana Balachandar,Gana Balachandar,Anirudh Ravichander,Energetic,Dance;Mass;College, mass college dance energetic celebration,
+34,Arabic Kuthu,Beast,2022,Anirudh Ravichander; Jonita Gandhi,Sivakarthikeyan,Anirudh Ravichander,Energetic,Dance;Fun;Love, dance fun love energetic kuthu,
+35,Ranjithame,Varisu,2023,Vijay; M. M. Manasi,Vivek,Thaman S,Energetic,Dance;Celebration;Romance, dance celebration romance festive,
+36,Naa Ready,Leo,2023,Vijay; Anirudh Ravichander,Vishnu Edavan,Anirudh Ravichander,Energetic,Mass;Celebration;Power, mass power celebration energy,
+37,Anbil Avan reprise demo,Demo Album,2024,Demo Singer,Demo Lyricist,Demo Composer,Romantic,Love;Hope;Eyes, synthetic love hope eyes கண் பார்வை,
+38,Thalli Pogathey,Achcham Yenbadhu Madamaiyada,2016,Sid Sriram; Aparna Narayanan,Thamarai,A. R. Rahman,Romantic,Love;Longing;Distance, distance longing love missing காதல் ஏக்கம்,
+39,Maruvaarthai,Enai Noki Paayum Thota,2019,Sid Sriram,Thamarai,Darbuka Siva,Romantic,Love;Memory;Longing, memory love longing heart நினைவு காதல்,
+40,Kannana Kanne,Viswasam,2019,Sid Sriram,Thamarai,D. Imman,Emotional,Father;Child;Love, family child affection tears love அன்பு,
+41,Kurumugil,Sita Ramam Tamil,2022,Sai Vignesh,Madhan Karky,Vishal Chandrasekhar,Romantic,Love;Cloud;Longing, cloud longing love kurugumil mazhai காதல்,
+42,Megham Karukatha,Thiruchitrambalam,2022,Dhanush,Dhanush,Anirudh Ravichander,Romantic,Rain;Love;Friendship, clouds rain love friendship மழை காதல்,
+43,Thenmozhi,Thiruchitrambalam,2022,Santhosh Narayanan,Dhanush,Anirudh Ravichander,Romantic,Love;Softness;Memory, soft love memory affection காதல் நினைவு,
+44,Kadhale Kadhale,96,2018,Chinmayi; Govind Vasantha,Karthik Netha,Govind Vasantha,Melancholy,Love;Memory;Nostalgia, nostalgia school love memory காதல் நினைவு,
+45,The Life of Ram,96,2018,Pradeep Kumar,Karthik Netha,Govind Vasantha,Melancholy,Travel;Memory;Solitude, travel solitude memory life தனிமை நினைவு,
+46,Kaathalae Kaathalae,96,2018,Chinmayi; Govind Vasantha,Karthik Netha,Govind Vasantha,Romantic,Love;Nostalgia;Yearning, yearning nostalgia love காதல் ஏக்கம்,
+47,Oru Deivam Thantha Poove,Kannathil Muthamittal,2002,P. Jayachandran; Chinmayi,Vairamuthu,A. R. Rahman,Emotional,Mother;Child;Love, mother child love affection அம்மா அன்பு,
+48,Vellai Pookal,Kannathil Muthamittal,2002,A. R. Rahman,Vairamuthu,A. R. Rahman,Peaceful,Peace;Hope;World, peace hope world flowers அமைதி நம்பிக்கை,
+49,Munbe Vaa reprise demo,Demo Collection,2024,Demo Singer,Demo Lyricist,Demo Composer,Romantic,Eyes;Love;Rain, synthetic eyes rain love கண் மழை காதல்,
+50,Mazhai Varum,Veppam,2011,Suzanne D'Mello,Na. Muthukumar,Joshua Sridhar,Romantic,Rain;Love;Longing, rain coming love longing mazhai மழை காதல்,
+51,Kangal Irandal,Subramaniapuram,2008,Bellie Raj; Deepa Mariam,Thamarai,James Vasanthan,Romantic,Eyes;Love;Village, eyes gaze village love kangal கண்கள் காதல்,
+52,Oru Kal Oru Kannadi,Siva Manasula Sakthi,2009,Yuvan Shankar Raja,Na. Muthukumar,Yuvan Shankar Raja,Romantic,Eyes;Love;Pain, eyes mirror love pain kannadi கண் காதல்,
+53,Ennodu Nee Irundhaal,I,2015,Sid Sriram; Sunitha Sarathy,Kabilan,A. R. Rahman,Romantic,Love;Togetherness;Devotion, together love devotion heart காதல் அன்பு,
+54,Pookkalae Sattru Oyivedungal,I,2015,Haricharan; Shreya Ghoshal,Madhan Karky,A. R. Rahman,Romantic,Love;Flowers;Nature, flowers love nature beauty பூ காதல்,
+55,Aathangara Marame,Kizhakku Cheemayile,1993,Mano; Sujatha Mohan,Vairamuthu,A. R. Rahman,Folk,Village;Nature;Love, village river tree love nature கிராமம் காதல்,
+56,Nila Kaigirathu,Indira,1995,Harini,Vairamuthu,A. R. Rahman,Melancholy,Moon;Loneliness;Childhood, moon loneliness night nila நிலா தனிமை,
+57,Malargale Malargale,Love Birds,1996,Hariharan; K. S. Chithra,Vairamuthu,A. R. Rahman,Romantic,Flowers;Love;Nature, flowers love nature soft பூ காதல் இயற்கை,
+58,Telephone Manipol,Indian,1996,Hariharan; Harini,Vaali,A. R. Rahman,Playful,Love;Technology;Fun, playful love phone fun காதல் விளையாட்டு,
+59,Suttum Vizhi,Ghajini,2005,Sriram Parthasarathy; Bombay Jayashri,Na. Muthukumar,Harris Jayaraj,Romantic,Eyes;Love;Beauty, eyes beauty love vizhi விழி கண் காதல்,
+60,Oru Maalai,Ghajini,2005,Karthik,Thamarai,Harris Jayaraj,Romantic,Evening;Love;Memory, evening love memory maalai காதல் நினைவு,
