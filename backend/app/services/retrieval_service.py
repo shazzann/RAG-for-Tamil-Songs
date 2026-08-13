@@ -129,12 +129,9 @@ def retrieve(question: str, db: Session, top_k: int = 5) -> tuple[list[Retrieved
             return results, "metadata"
 
     # 3. Fall back to pgvector semantic search on lyric chunks
-    from app.services.query_expansion import expand_query
     
-    # Expand and transliterate query using LLM
-    expanded_query = expand_query(question_clean)
-    
-    query_embedding = generate_embedding(expanded_query)
+    # Generate embedding directly from the user's question, skipping query expansion
+    query_embedding = generate_embedding(question_clean)
     if not query_embedding:
         return [], "semantic"
 
