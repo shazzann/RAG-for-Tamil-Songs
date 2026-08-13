@@ -20,8 +20,10 @@ export interface ChatRequest {
 }
 
 export const fetchChatResponse = async (query: string): Promise<ChatResponse> => {
-  const apiUrl = import.meta.env.VITE_API_URL || '';
-  const response = await fetch(`${apiUrl}/api/chat/`, {
+  // If VITE_API_URL is set (Production), it uses that (e.g. https://railway.app).
+  // If not set (Local dev), it defaults to '/api' which uses the Vite proxy!
+  const apiUrl = import.meta.env.VITE_API_URL || '/api';
+  const response = await fetch(`${apiUrl}/chat/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
