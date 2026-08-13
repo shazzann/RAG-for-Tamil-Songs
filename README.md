@@ -1,5 +1,6 @@
 # RAG Tamil Songs 🎵
 
+![App Screenshot](assets/image.png)
 An end-to-end Retrieval-Augmented Generation (RAG) application that allows you to chat with the lyrics of Tamil songs! Ask questions like *"What songs talk about rivers?"* or *"Who composed the songs in Thiruchitrambalam?"* and the AI will retrieve the exact stanzas and metadata to answer you.
 
 Built with a **FastAPI** backend, a **React/Vite** frontend with an ultra-premium glassmorphic UI, **Supabase** pgvector for storing embeddings, and powered by **Google Gemini**.
