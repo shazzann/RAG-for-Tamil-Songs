@@ -187,8 +187,8 @@ graph TD
 | **Precision@5** | **0.125** |
 | **MRR** | **0.398** |
 
-> [!WARNING]
-> **Query expansion currently *hurts* performance.** The synonym injection dilutes the embedding signal — adding too many unrelated terms pushes the query vector away from the target. This is a known issue that needs to be addressed by switching to a smarter expansion strategy (e.g., LLM-based query rewriting or weighted term injection).
+> [!NOTE]
+> **Query expansion has been removed.** We previously used synonym injection (and later LLM rewriting), but both methods diluted the embedding signal — adding too many unrelated terms pushed the query vector away from the target. We have fully removed query expansion from the retrieval pipeline to maximize baseline pgvector precision.
 
 ### Performance by Query Type (Baseline)
 
@@ -302,7 +302,7 @@ RAG_Tamil_Songs/
 | **Web Scraper** | 🟡 Medium | [scrape_songs.py](file:///f:/Projects/RAG_Tamil_Songs/backend/scripts/scrape_songs.py) is empty. For scaling beyond 60 songs. |
 | **Better Chunking** | 🟡 Medium | Current strategy is 1 line = 1 chunk. Grouping 2-4 lines (stanzas) would improve semantic coherence. |
 | **Frontend** | 🟡 Medium | No frontend exists yet. Planned: Next.js / React. |
-| **Query Expansion Fix** | 🟡 Medium | Current expansion hurts retrieval. Consider LLM-based rewriting or weighted terms. |
+| **Query Expansion Fix** | 🟢 Low | We completely removed query expansion because it degraded semantic search. We can revisit it later with weighted term injection if baseline search hits a ceiling. |
 | **Tamil Script Support** | 🟡 Medium | Pure Tamil queries completely fail (0% Hit@5). Need transliteration or cross-lingual embeddings. |
 | **Re-ranker** | 🟢 Low | Add a cross-encoder re-ranker on top of retrieved chunks for better precision. |
 | **Deployment** | 🟢 Low | No CI/CD or deployment pipeline yet. |
@@ -314,7 +314,7 @@ RAG_Tamil_Songs/
 | Issue | Severity | Details |
 |---|---|---|
 | DB connection fails without internet | 🔴 | Supabase-hosted PostgreSQL requires network access. The app crashes on startup if the DB is unreachable. |
-| Query expansion degrades results | 🟡 | Adding all synonyms at once dilutes embeddings. Baseline outperforms expanded on most metrics. |
+| Query expansion degrades results | ✅ | (Fixed by removal) Adding synonyms diluted embeddings. Baseline outperforms expanded on most metrics, so we threw out expansion entirely. |
 | Tamil script queries return 0 results | 🟡 | Lyrics are in Tanglish but queries in Tamil script — no transliteration bridge exists. |
 | Theme search misses many relevant songs | 🟡 | Embeddings don't capture theme-level semantics well for single-line chunks. |
 | `requirements.txt` is bloated | 🟢 | Contains 283 packages from global pip freeze, including unrelated packages (torch, whisper, kedro, etc.). |
