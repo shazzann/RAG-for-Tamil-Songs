@@ -1,5 +1,6 @@
 import logging
 from fastapi import FastAPI, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
@@ -18,6 +19,14 @@ app = FastAPI(
     title="Tamil Song RAG Agent",
     description="A RAG-based Tamil song intelligence chatbot",
     version="0.1.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for Vercel deployment
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(songs.router)
