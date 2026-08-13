@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bot, User } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import './ChatArea.css';
 
 export interface Message {
@@ -25,18 +26,22 @@ export const ChatArea: React.FC<ChatAreaProps> = ({ messages, isLoading, error }
       ) : (
         <div className="messages-list">
           {messages.map((msg, idx) => (
-            <div key={idx} className={`message ${msg.role}`}>
+            <div key={idx} className={`message ${msg.role} animate-entrance`} style={{ animationDelay: `${idx * 0.05}s` }}>
               <div className="message-avatar">
                 {msg.role === 'user' ? <User size={18} /> : <Bot size={18} />}
               </div>
               <div className="message-content">
-                <p>{msg.content}</p>
+                {msg.role === 'assistant' ? (
+                  <ReactMarkdown>{msg.content}</ReactMarkdown>
+                ) : (
+                  <p>{msg.content}</p>
+                )}
               </div>
             </div>
           ))}
           
           {isLoading && (
-            <div className="message assistant loading">
+            <div className="message assistant loading animate-entrance">
               <div className="message-avatar">
                 <Bot size={18} />
               </div>

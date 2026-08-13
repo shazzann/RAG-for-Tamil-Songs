@@ -32,12 +32,7 @@
   display: flex;
   gap: 1rem;
   max-width: 90%;
-  animation: fadeIn 0.3s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  opacity: 0; /* for animate-entrance */
 }
 
 .message.user {
@@ -72,16 +67,40 @@
   line-height: 1.6;
 }
 
+.message-content p {
+  margin-bottom: 0.5rem;
+}
+
+.message-content p:last-child {
+  margin-bottom: 0;
+}
+
+.message-content ul, .message-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.message-content li {
+  margin-bottom: 0.25rem;
+}
+
+.message-content strong {
+  font-weight: 600;
+  color: var(--primary-hover);
+}
+
 .user .message-content {
   background: var(--message-user-bg);
   border: 1px solid var(--message-user-border);
   border-top-right-radius: 4px;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
 }
 
 .assistant .message-content {
   background: var(--message-ai-bg);
   border: 1px solid var(--message-ai-border);
   border-top-left-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Typing Indicator */

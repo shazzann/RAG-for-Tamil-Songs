@@ -9,7 +9,7 @@ interface SourceCardProps {
 
 export const SourceCard: React.FC<SourceCardProps> = ({ source }) => {
   return (
-    <div className="source-card glass-panel glass-panel-hover">
+    <div className="source-card glass-panel glass-panel-hover animate-entrance">
       <div className="source-card-header">
         <h4 className="source-title text-gradient">{source.title}</h4>
         <span className="source-badge">{source.source_type}</span>

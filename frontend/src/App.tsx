@@ -36,8 +36,10 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <header className="header">
+    <>
+      <div className="animated-bg"></div>
+      <div className="app-container">
+        <header className="header">
         <h1 className="text-gradient">Tamil Song Finder</h1>
         <p className="text-muted">Ask questions about songs, movies, or lyrics in Tanglish or Tamil.</p>
       </header>
@@ -65,6 +67,7 @@ function App() {
         )}
       </main>
     </div>
+    </>
   );
 }
 
