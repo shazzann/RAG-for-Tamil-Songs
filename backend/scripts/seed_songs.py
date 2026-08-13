@@ -10,7 +10,7 @@ from app.database import SessionLocal, Base, engine
 from app.models import Song
 
 
-CSV_PATH = BASE_DIR / "data" / "sample_songs.csv"
+CSV_PATH = BASE_DIR / "data" / "sample_songs_v2.csv"
 
 
 def seed_songs():

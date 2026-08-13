@@ -21,6 +21,7 @@ def generate_missing_embeddings():
 
         print(f"Found {len(chunks)} chunks without embeddings.")
 
+        import time
         updated = 0
 
         for chunk in chunks:
@@ -32,6 +33,9 @@ def generate_missing_embeddings():
             if embedding:
                 chunk.embedding = embedding
                 updated += 1
+                db.commit()
+            
+            time.sleep(1.5)
 
         db.commit()
 
